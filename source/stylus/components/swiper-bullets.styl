@@ -1,0 +1,18 @@
+.swiper-bullets
+  position relative !important
+  width 100% !important
+  display: flex
+  justify-content: center
+  bottom: 0 !important
+  margin: 20px 0 0 0
+  +above($breakpoints.sm)
+    display: none
+  .swiper-pagination-bullet
+    width 6px
+    height: 6px
+    padding: 0
+    transition: 0.3s
+    background: rgb(255, 255, 255)
+  .swiper-pagination-bullet-active
+    padding: 0 12px
+    border-radius: 100px

@@ -1,0 +1,56 @@
+.header
+  position relative
+  z-index 22
+  color: $color-white
+
+  &__info
+    padding: 4px 0
+    background-color: $color-viol-1
+    text-align: center
+    font-size: 10px
+    line-height: normal
+    +above($breakpoints.sm)
+      display: none
+
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 10px 0
+    +above($breakpoints.sm)
+      padding: 8px 0
+    +above($breakpoints.md)
+      padding: 10px 0
+    +above($breakpoints.xxl)
+      padding: 14px 0
+
+  &__container
+    display: flex
+    align-items: center
+    gap: 10px
+    +above($breakpoints.md)
+      gap: 20px
+    +above($breakpoints.xxl)
+      gap: 30px
+
+  &__logo
+    img
+      height: auto
+      width 53px
+      +above($breakpoints.sm)
+        width 70px
+      +above($breakpoints.md)
+        width 80px
+      +above($breakpoints.xxl)
+        width 112px
+
+  &__description
+    display: none
+    +above($breakpoints.sm)
+      display: block
+    div
+      margin: 0 0 2px 0
+      +above($breakpoints.md)
+        margin: 0 0 4px 0
+      +above($breakpoints.xxl)
+        margin: 0 0 6px 0

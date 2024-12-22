@@ -1,0 +1,45 @@
+@import 'common/variables'
+
+*
+  box-sizing: border-box
+
+body,
+html
+  height: 100%
+  min-height: 100%
+
+body
+  margin: 0
+  font-family: $base-font-family
+  font-weight: 400
+
+h1,
+h2,
+h3
+  padding: 0
+  margin: 0
+
+ul,
+ol,
+li
+  list-style: none
+  padding: 0
+  margin: 0
+
+a
+  -webkit-tap-highlight-color: transparent
+  text-decoration: none
+  outline: none
+  color: inherit
+
+strong
+  font-family: $base-font-family
+
+br
+  display: none
+  +above($breakpoints.sm)
+    display: inline-block
+
+svg,
+img
+  display: block

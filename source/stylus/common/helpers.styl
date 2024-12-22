@@ -1,0 +1,202 @@
+.wrapper
+  max-width: 362px
+  margin: 0 auto
+  padding: 0 6px
+  +above($breakpoints.sm)
+    max-width: 720px
+    margin: 0 auto
+    padding: 0 12px
+  +above($breakpoints.md)
+    max-width: 970px
+    padding: 0 15px
+  +above($breakpoints.xxl)
+    padding: 0 20px
+    max-width: 1200px
+
+section
+  font-size: 14px
+  line-height: 120%
+  +above($breakpoints.sm)
+    font-size: 14px
+  +above($breakpoints.md)
+    font-size: 15px
+  +above($breakpoints.xxl)
+    font-size: 16px
+
+h1,
+h2,
+h3,
+h4
+  font-family: "Gilroy-Extrabold"
+  font-weight: 800
+
+.d-flex
+  display: flex
+.d-block
+  display: block
+.d-i-block
+  display: inline-block
+.d-inline
+  display: inline
+.d-none
+  display: none
+
+.color-white
+  color: $color-white
+.color-black
+  color: $color-black
+.color-yellow-1
+  color: $color-yellow-1
+.color-pink-1
+  color: $color-pink-1
+.color-viol-1
+  color: $color-viol-1
+
+.font-gil-light
+  font-family: "Gilroy-Light"
+  font-weight: 300
+.font-gil-reg
+  font-family: "Gilroy-Regular"
+  font-weight: 400
+.font-gil-s-bold
+  font-family: "Gilroy-Semibold"
+  font-weight: 600
+.font-gil-bold
+  font-family: "Gilroy-Bold"
+  font-weight: 700
+.font-gil-e-bold
+  font-family: "Gilroy-Extrabold"
+  font-weight: 800
+
+.font-s-12
+  font-size: 12px
+  line-height: 140%
+  +above($breakpoints.sm)
+    font-size: 10px
+  +above($breakpoints.md)
+    font-size: 11px
+  +above($breakpoints.xxl)
+    font-size: 12px
+.font-s-14
+  font-size: 11px
+  line-height: normal
+  +above($breakpoints.md)
+    font-size: 13px
+  +above($breakpoints.xxl)
+    font-size: 14px
+.font-s-16
+  line-height: 110%
+  font-size: 14px
+  +above($breakpoints.sm)
+    font-size: 13px
+  +above($breakpoints.md)
+    font-size: 14px
+  +above($breakpoints.xxl)
+    font-size: 16px
+.font-s-18
+  font-size: 15px
+  line-height: 140%
+  +above($breakpoints.sm)
+    font-size: 14px
+  +above($breakpoints.xxl)
+    font-size: 18px
+.font-s-20
+  font-size: 16px
+  line-height: 140%
+  +above($breakpoints.sm)
+    font-size: 15px
+  +above($breakpoints.md)
+    font-size: 18px
+  +above($breakpoints.xxl)
+    font-size: 20px
+.font-s-22
+  font-size: 16.5px
+  line-height: 140%
+  +above($breakpoints.sm)
+    font-size: 15.5px
+  +above($breakpoints.md)
+    font-size: 18.5px
+  +above($breakpoints.xxl)
+    font-size: 22px
+.font-s-24
+  font-size: 17.5px
+  line-height: 100%
+  +above($breakpoints.sm)
+    font-size: 16px
+  +above($breakpoints.md)
+    font-size: 19px
+  +above($breakpoints.xxl)
+    font-size: 24px
+.font-s-26
+  font-size: 16px
+  line-height: normal
+  +above($breakpoints.sm)
+    font-size: 17px
+  +above($breakpoints.md)
+    font-size: 22px
+  +above($breakpoints.xxl)
+    font-size: 26px
+.font-s-28
+  font-size: 20px
+  line-height: 110%
+  +above($breakpoints.sm)
+    font-size: 18px
+  +above($breakpoints.md)
+    font-size: 23px
+  +above($breakpoints.xxl)
+    font-size: 28px
+.font-s-32
+  font-size: 22px
+  line-height: 100%
+  +above($breakpoints.sm)
+    font-size: 24px
+  +above($breakpoints.md)
+    font-size: 27px
+  +above($breakpoints.xxl)
+    font-size: 32px
+.font-s-54
+  font-size: 26px
+  line-height: 110%
+  +above($breakpoints.sm)
+    font-size: 28px
+  +above($breakpoints.md)
+    font-size: 40px
+  +above($breakpoints.xxl)
+    font-size: 52px
+
+.text-up
+  text-transform: uppercase
+.text-init
+  text-transform: initial
+.text-center
+  text-align: center
+.text-left
+  text-align: left
+.text-right
+  text-align: right
+.text-ital
+  font-style: italic
+.text-bold
+  font-weight: bold
+
+.tap-color
+  -webkit-tap-highlight-color: transparent
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+
+.border-r-10
+  border-radius: 8px
+  +above($breakpoints.xxl)
+    border-radius: 10px
+.border-r-20
+  border-radius: 14px
+  +above($breakpoints.xxl)
+    border-radius: 20px
+
+.transform-unset
+  +above($breakpoints.sm)
+    transform: unset !important
+    transform-style: unset !important

@@ -1,0 +1,66 @@
+.form-modal
+  &__feedback
+    color: $color-white
+    background-color: #373737
+    border-radius: 14px
+    padding: 32px 4px 17px 4px;
+    +above($breakpoints.sm)
+      padding: 34px 10px 20px 10px
+    +above($breakpoints.md)
+      padding: 38px 14px 20px 14px
+    +above($breakpoints.xxl)
+      padding: 40px 20px
+      border-radius: 20px
+
+  &__info-title
+    font-size: 20px;
+    line-height: 120%
+    margin: 0 0 20px 0
+    font-family: "Gilroy-Extrabold"
+    font-weight: 800
+    +above($breakpoints.md)
+      font-size: 24px
+      margin: 0 0 22px 0
+    +above($breakpoints.xxl)
+      margin: 0 0 20px 0
+      font-size: 27px
+    br
+      display: block
+
+  &__feedback-item
+    max-width: 270px
+    margin: 0 auto
+    +above($breakpoints.sm)
+      max-width: 220px
+    +above($breakpoints.md)
+      max-width: 280px
+    +above($breakpoints.xxl)
+      max-width: 330px
+
+  &__feedback-input
+    height: 56px
+    margin-bottom: 7px
+    +above($breakpoints.sm)
+      margin-bottom: 8px
+      height: 45px
+    +above($breakpoints.md)
+      height: 60px
+    +above($breakpoints.xxl)
+      height: 70px
+      margin-bottom: 10px
+    .input
+      border: none
+      &__field
+        height: 100%
+
+  &__button
+    margin-bottom: 14px
+
+  &__agree
+    font-size: 11px;
+    line-height: 13px;
+    +above($breakpoints.md)
+      font-size: 13px;
+      line-height: 15px;
+    a
+      text-decoration: underline

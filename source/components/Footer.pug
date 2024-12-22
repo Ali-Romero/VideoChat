@@ -1,0 +1,26 @@
+mixin footer()
+  footer.footer
+    .footer__head
+      .wrapper
+        .footer__head-inner
+          div © MIVINO, 
+            span(data-current-year)
+          a(href="#" data-remodal-target="privacy") Политика конфиденциальности
+
+    .footer__wrapper
+      .wrapper
+        .footer__row
+
+          .footer__col
+            .footer__logo
+              img(src="images/logo-main.png" loading="lazy" alt="logo" width="66" height="48").d-block
+            .footer__info
+              .footer__description.font-s-18.font-gil-s-bold © MIVINO, 
+                span(data-current-year)
+              a(href="#" data-remodal-target="privacy").footer__privacy.font-s-14.font-gil-light Политика конфиденциальности
+
+          .footer__col
+
+          .footer__col
+            .footer__connection
+              +connection()

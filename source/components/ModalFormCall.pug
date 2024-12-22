@@ -1,0 +1,28 @@
+.remodal(data-remodal-id="modal-form-call" data-remodal-options="modifier: modal-scrollable, hashTracking:false")
+  .remodal__feedback.remodal__feedback--call
+    .remodal__feedback-close(data-remodal-action="close" title="Закрыть").tap-color
+      .remodal__feedback-icon
+    .form-modal
+      form.form-modal__feedback(data-feedback-form)
+        .form-modal__info-title Закажите обратный звонок 
+          br.d-block
+          |и мы свяжемся с вами 
+        .form-modal__feedback-container
+          .form-modal__feedback-input.form-modal__feedback-item
+            .input
+              input(type="text" name="name" autocomplete="off" placeholder="Ваше имя").input__field
+          .form-modal__feedback-input.form-modal__feedback-item
+            .input
+              input(type="tel" name="phone" autocomplete="off" data-inputmask="'mask': '+7 (999) 999 9999'" placeholder="Ваш телефон").input__field
+          .form-modal__button.form-modal__feedback-item
+            button.btn(type="submit")
+              span Заказать
+          .form-modal__agree
+            .form-modal__agree-text
+              |Нажимая на кнопку «Заказать», я&nbsp;даю&nbsp;согласие 
+              br
+              |на&nbsp;обработку персональных данных и&nbsp;соглашаюсь 
+              br
+              |с&nbsp;
+              a(href="#" data-remodal-target="privacy").agree-link политикой конфиденциальности
+          input(type="text" name="honeyfield" class="honeypot" style="display:none")

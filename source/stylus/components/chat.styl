@@ -1,0 +1,377 @@
+.chat
+  background: #f292d2
+  overflow: hidden
+  border-radius: 20px
+  +above($breakpoints.xxl)
+    border-radius: 30px
+
+  &__container
+    position: relative;
+    color: #303437;
+    overflow: hidden;
+    display: flex
+    gap: 8px
+    overflow: auto
+    height: 305px
+    padding: 12px
+    +above($breakpoints.sm)
+      height: 337px
+      padding: 10px
+    +above($breakpoints.md)
+      padding: 12px
+      height: 332px
+    +above($breakpoints.xxl)
+      padding: 20px
+      height: 404px
+
+  &__wrapper
+    position relative
+    width 100%
+
+  &__status
+    margin: 14px 0 0 0
+    +above($breakpoints.md)
+      margin: 20px 0 0 0
+    +above($breakpoints.xxl)
+      margin: 30px 0 0 0
+    div
+      display: inline-flex
+      align-items: center
+      background-color: rgba(255, 255, 255, 0.565)
+      gap: 12px
+      padding: 8px 12px;
+      border-radius: 14px;
+      +above($breakpoints.xxl)
+        gap: 14px
+        padding: 10px 16px;
+        border-radius: 20px;
+    img
+      height: auto
+      width 32px
+      +above($breakpoints.xxl)
+        width 40px
+
+.response-options
+  display: flex;
+  flex-wrap: wrap;
+  margin: 12px 0
+  gap: 6px;
+  justify-content: flex-start
+  +above($breakpoints.sm)
+    gap: 4px;
+  +above($breakpoints.md)
+    gap: 6px;
+    margin: 7px 0;
+  +above($breakpoints.xxl)
+    gap: 11px;
+    margin: 12px 0
+  &:last-child
+    margin-bottom: 0
+  button
+    border: none;
+    font-family: "Gilroy-Medium"
+    background: #f7f2ff;
+    color: $color-viol-1
+    cursor: pointer;
+    line-height: 120%
+    outline: none
+    text-align: center
+    border-radius: 13px;
+    font-size: 13px;
+    padding: 8px
+    min-width:49%
+    max-width: 32.2%
+    min-height: 40px
+    transition: 0.3s
+    +above($breakpoints.sm)
+      min-height: unset
+      min-width: 20%
+      max-width: 32.7%
+      border-radius: 12px;
+    +above($breakpoints.md)
+      border-radius: 20px;
+      font-size: 14px;
+      padding: 10px
+      max-width: 32.6%
+    +above($breakpoints.xxl)
+      max-width: 32.2%
+      border-radius: 16px;
+      padding: 14px
+      font-size: 16px;
+    &:hover
+      background: #5800f0;
+      color: $color-white
+
+.message
+  display: flex;
+  align-items: flex-start;
+
+.bot-message
+  flex-direction: row;
+  margin: 0 0 6px 0;
+  +above($breakpoints.xxl)
+    margin: 0 0 10px 0;
+  &:last-child
+    margin: 0
+  br
+    display: inline-block !important
+
+.user-message
+  flex-direction: row-reverse;
+  text-align: right;
+  margin: 12px 0
+  +above($breakpoints.sm)
+    margin: 16px 0
+    text-align: center
+  +above($breakpoints.xxl)
+    margin: 20px 0
+
+.message p
+  margin: 0;
+  max-width: 100%;
+  padding: 11px;
+  +above($breakpoints.sm)
+    padding: 12px;
+  +above($breakpoints.xxl)
+    padding: 16px;
+
+.bot-message p
+  background-color: $color-white
+  max-width 100%
+  width 100%
+  border-radius: 19px 19px 0 19px;
+  +above($breakpoints.xxl)
+    border-radius: 24px 24px 0 24px;
+
+.bot-message
+  &.first-message
+    p
+      height: 68px
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 130%
+      +above($breakpoints.sm)
+        text-overflow: unset
+        overflow: unset
+        -webkit-line-clamp: unset
+        -webkit-box-orient: unset
+        display: block
+        height: unset
+        line-height: 120%
+      br
+        display: none
+        +above($breakpoints.sm)
+          display: inline-block
+
+.user-message p
+  background-color: #0070F0
+  color: white;
+  min-width: 10%
+  border-radius: 19px 19px 0 19px;
+  +above($breakpoints.xxl)
+    border-radius: 24px 24px 0 24px;
+
+.typing-indicator
+  div
+    margin: 12px 0 0 0
+    display: flex;
+    gap: 2px;
+    opacity: 0;
+    font-size: 14px;
+    color: #2d2d2d;
+    white-space: nowrap
+    opacity: 1;
+    animation: fadeEffect 4.5s infinite;
+    font-style: italic;
+
+@keyframes fadeEffect
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+
+.typing-indicator span
+  display: block
+  animation: typing-bounce 1.4s infinite ease-in-out;
+
+.typing-indicator.active
+  opacity: 1;
+
+.typing-indicator span:nth-child(1)
+  animation-delay: 0s;
+
+.typing-indicator span:nth-child(2)
+  animation-delay: 0.4s;
+
+.typing-indicator span:nth-child(3)
+  animation-delay: 0.6s;
+
+@keyframes typing-bounce
+  0%, 80%, 100% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 1;
+  }
+
+.textarea-container
+  display: flex
+  flex-direction: column
+  gap: 10px
+  margin: 20px 0
+  &:last-child
+    margin: 20px 0 0 0
+  textarea
+    resize: none
+    width 100% !important
+    color: black
+    border-radius: 20px 20px 20px 20px;
+    height: 100px
+    padding-top: 16px
+  .btn
+    width 244px
+    margin: 0 auto
+
+.dynamic-form
+  display: flex
+  gap: 6px
+  flex-wrap: wrap
+  +above($breakpoints.sm)
+    gap: 8px
+  .input__field
+    width 48.97%
+    +above($breakpoints.sm)
+      width 180px
+    +above($breakpoints.md)
+      width 198px
+    +above($breakpoints.xxl)
+      width 226px
+  .btn
+    margin: 0
+    width 100%
+    +above($breakpoints.sm)
+      width 180px
+    +above($breakpoints.md)
+      width 198px
+    +above($breakpoints.xxl)
+      width 226px
+
+.swiper-chat
+  overflow: hidden
+  width 220px
+  margin: 0 0 6px 0
+  +above($breakpoints.sm)
+    width 576px
+  +above($breakpoints.md)
+    width 716px
+  +above($breakpoints.xxl)
+    margin: 0 0 10px 0
+    width 824px
+  .swiper-bullets
+    display: flex !important
+    margin: 14px 0 0 0
+    .swiper-pagination-bullet
+      background: grey
+  .swiper-slide
+    div
+      width 220px
+      height: 132px
+      +above($breakpoints.sm)
+        width 183px
+        height: 110px
+      +above($breakpoints.md)
+        width 228px
+        height: 137px
+      +above($breakpoints.xxl)
+        width 260px
+        height: 156px
+    img
+      width 100%
+      height: auto
+      border-radius: 12px
+      +above($breakpoints.md)
+        border-radius: 14px
+      +above($breakpoints.xxl)
+        border-radius: 20px
+
+.chat-video
+  transform: scale(0.9);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+
+.chat-video.hidden
+  transform: scale(0.9);
+  opacity: 0;
+
+video:not(.hidden)
+  transform: scale(1);
+  opacity: 1;
+
+.simplebar-scrollbar
+  &:before
+    background: #9f9f9f;
+
+.simplebar-track.simplebar-vertical
+  top: 6%
+  bottom: 6%
+
+.video-container
+  position: relative
+  height: 250px;
+  display: flex
+  align-items: center;
+  +above($breakpoints.sm)
+    height: 337px;
+  +above($breakpoints.md)
+    height: 332px;
+  +above($breakpoints.xxl)
+    height: 404px;
+  video
+    margin: 0 0 33px 0
+    +above($breakpoints.sm)
+      margin: 0
+    +above($breakpoints.md)
+      margin: 0 0 63px 0;
+
+.mute-button
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 10
+  padding: 0
+  outline: none
+  border: none
+  cursor: pointer
+  background: none
+  img
+    position: absolute
+    top: 14px
+    right 14px
+    transition: 0.3s
+    transform: scale(1)
+    height: auto
+    width 32px
+    +above($breakpoints.sm)
+      top: 18px
+      right 18px
+      width 36px
+    +above($breakpoints.md)
+      top: 20px
+      right 20px
+      width 40px
+    +above($breakpoints.xxl)
+      top: 24px
+      right 24px
+      width 48px
+  &:active
+    img
+      transform: scale(1.2)
+      +above($breakpoints.sm)
+        transform: scale(1)
+  &:hover
+    img
+      +above($breakpoints.sm)
+        transform: scale(1.2)

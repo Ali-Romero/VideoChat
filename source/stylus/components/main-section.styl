@@ -1,0 +1,73 @@
+.main-section
+  color: $color-white
+  width 100%
+
+  &__inner
+    padding: 30px 0 50px 0
+    position relative
+    z-index 1
+    +above($breakpoints.sm)
+      padding: 20px 0 40px 0
+    +above($breakpoints.md)
+      padding: 24px 0 60px 0
+    +above($breakpoints.xxl)
+      padding: 40px 0 80px 0
+
+  &__content
+    position relative
+    display: none
+
+  &__info
+    +above($breakpoints.sm)
+      width 499px
+    +above($breakpoints.md)
+      width 634px
+    +above($breakpoints.xxl)
+      width 744px
+
+  &__title
+    margin: 0 0 22px 0
+    text-align: center
+    letter-spacing: -0.02em;
+    display: none
+    +above($breakpoints.sm)
+      text-align: left
+      margin: 0 0 14px 0
+    +above($breakpoints.md)
+      margin: 0 0 20px 0
+    +above($breakpoints.xxl)
+      margin: 0 0 28px 0
+
+  &__title-secondary
+    margin: 0 0 4px 0
+    display: block
+
+  &__title-main
+    display: inline-block
+    background: linear-gradient(90deg, #078a3e 0%, #35ce75 100%);
+    padding: 6px 11px
+    border-radius: 6px
+    +above($breakpoints.sm)
+      padding: 5px 9px 4px 9px
+      border-radius: 8px
+    +above($breakpoints.xxl)
+      padding: 5px 13px
+      border-radius: 12px
+
+  &__video
+    border-radius: 20px
+    overflow: hidden
+    background: radial-gradient(72.04% 73.72% at 49.73% 40.71%, #fff 0%, #ff3fbe 100%);
+    margin: 0 auto 10px auto
+    width: 250px;
+    +above($breakpoints.sm)
+      margin: 0
+      position: absolute
+      right 0
+      bottom: 0
+      width: 191px;
+    +above($breakpoints.md)
+      width: 290px;
+    +above($breakpoints.xxl)
+      border-radius: 30px
+      width: 390px;

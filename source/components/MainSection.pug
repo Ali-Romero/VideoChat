@@ -1,0 +1,52 @@
+section.main-section
+  .wrapper
+    .main-section__inner
+      h1.main-section__title.font-s-54
+        span.color-yellow-1 Как за 16 дней 
+        |открыть 
+        |бизнес по продаже 
+        br
+        |мороженого с прибылью 
+        span.color-pink-1 от 257 000 ₽ в месяц
+
+      .main-section__content
+        .main-section__video
+          .video-container#videoContainer
+            button#muteButton.mute-button(onclick="toggleMute()").tap-color
+              img(src="images/mute.svg" loading="lazy" alt="mute" width="48" height="48").d-block#muteIcon
+              span.waves
+                span.wave
+                span.wave
+                span.wave
+
+        .main-section__info
+          form.chat
+            .chat__container.chat-container#chatContainer(data-simplebar)
+              .chat__wrapper#chatContentWrapper
+                .chat__content#chatContent
+                .typing-indicator#typingIndicator
+                  div
+                    |Анастасия печатает
+                    span .
+                    span .
+                    span .
+                .chat__status#status(style="display: none;")
+                  div
+                    img(src="images/checked.svg", alt="status" width="40" height="40")
+                    |Ваша заявка принята!
+              input(type="text" name="honeyfield" class="honeypot" style="display:none")
+
+      .main-section__video-chat
+        .call-chat
+          .call-chat__main
+            .call-chat__frames
+              video(id="localVideo" autoplay playsinline muted).call-chat__frame.call-chat__frame--1
+              video(id="remoteVideo" autoplay playsinline).call-chat__frame.call-chat__frame--2
+            .call-chat__controll
+              button(id="startCall").call-chat__btn.call-chat__btn--start Начать звонок
+              button(id="endCall").call-chat__btn.call-chat__btn--end Завершить звонок
+          .call-chat__messages
+            .call-chat__messages-frame(id="messagesFrame")
+            .call-chat__messages-container
+              textarea(id="messageInput" placeholder="Введите сообщение").call-chat__messages-input
+              button(id="sendMessageButton").call-chat__messages-send Отправить

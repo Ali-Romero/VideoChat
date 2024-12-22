@@ -1,0 +1,70 @@
+.footer
+  position: relative
+  z-index 3
+  line-height: 120%
+  font-size: 12px
+  background-color: #0b0b0b;
+  color: $color-white
+  +above($breakpoints.md)
+    font-size: 14px
+  +above($breakpoints.xxl)
+    font-size: 16px
+
+  &__head
+    background-color: #5800F0
+    +above($breakpoints.sm)
+      display: none
+
+  &__head-inner
+    display: flex
+    justify-content: space-between
+    padding: 3px 0
+    div
+      font-size: 12px
+      line-height: normal
+    a
+      font-size: 10px
+      line-height: normal
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      text-align: center;
+
+  &__row
+    margin: 0 0 0 auto
+    padding: 10px 0
+    text-align: center
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +above($breakpoints.sm)
+      padding: 20px 0
+      text-align: left
+    +above($breakpoints.xxl)
+      padding: 34px 0
+
+  &__logo
+    +above($breakpoints.sm)
+      display: none
+    img
+      height: auto
+      width 53px
+
+  &__description
+    text-align: center
+    margin: 0 0 4px 0
+    +above($breakpoints.sm)
+      text-align: left
+
+  &__info
+    display: none
+    +above($breakpoints.sm)
+      display: block
+
+  &__privacy
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #FEEC47
+
+  &__connection
+    display: flex
+    justify-content: center

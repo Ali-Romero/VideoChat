@@ -1,0 +1,73 @@
+@font-face
+  font-family: "Gilroy-Light"
+  src: url('../fonts/Gilroy-Light.woff'), url('../fonts/Gilroy-Light.woff2')
+  font-display: swap
+@font-face
+  font-family: "Gilroy-Regular"
+  src: url('../fonts/Gilroy-Regular.woff'), url('../fonts/Gilroy-Regular.woff2')
+  font-display: swap
+@font-face
+  font-family: "Gilroy-Medium"
+  src: url('../fonts/Gilroy-Medium.woff'), url('../fonts/Gilroy-Medium.woff2')
+  font-display: swap
+@font-face
+  font-family: "Gilroy-Semibold"
+  src: url('../fonts/Gilroy-Semibold.woff'), url('../fonts/Gilroy-Semibold.woff2')
+  font-display: swap
+@font-face
+  font-family: "Gilroy-Bold"
+  src: url('../fonts/Gilroy-Bold.woff'), url('../fonts/Gilroy-Bold.woff2')
+  font-display: swap
+@font-face
+  font-family: "Gilroy-Extrabold"
+  src: url('../fonts/Gilroy-Extrabold.woff'), url('../fonts/Gilroy-Extrabold.woff2')
+  font-display: swap
+
+@import 'common/variables'
+@import 'common/*'
+@import 'components/*'
+
+.page
+  display: flex
+  flex-direction: column
+  min-height: 100%
+  overflow: hidden
+  position relative
+
+  &--thanks
+    font-size: 13px
+    line-height: 130%
+    color: $color-white
+    position relative
+    z-index 1
+    +above($breakpoints.xxl)
+      font-size: 16px
+    .connection__description
+      display: none
+    .page__container
+      position relative
+      &:before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        right 0
+        bottom: 0
+        background-color: rgba(0, 0, 0, 0.539)
+
+  &__container
+    flex: 1
+    display: flex
+    flex-direction: column;
+    background-image: url('../images/main-bg.jpg')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    background-attachment: fixed
+    background-color: #0e0e0e
+
+  &__content
+    flex: 1
+    display: flex
+    justify-content: center;
+    align-items: center;

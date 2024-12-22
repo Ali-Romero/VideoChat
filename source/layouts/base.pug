@@ -1,0 +1,75 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description" content="Как за 16 дней открыть бизнес по продаже мороженого с прибылью от 257 000 рублей в месяц")
+    meta(property="og:image" content="path/to/image.jpg")
+    meta(name="HandheldFriendly" content="True")
+    meta(name="MobileOptimized" content="width")
+
+    link(rel="icon" href="favicon.ico" type="image/x-icon")
+
+    if production
+      // стили для font-icons
+      // link(rel="stylesheet", href="icons/icons.min.css")
+      // стили для svg-sprites
+      //- link(rel="stylesheet", href="svg/svg-symbols.min.css")
+      link(rel="stylesheet", href="css/vendor.min.css")
+      link(rel="stylesheet", href="css/reset.min.css")
+      link(rel="stylesheet", href="css/main.min.css")
+    else
+      // стили для font-icons
+      // link(rel="stylesheet", href="icons/icons.css")
+      // стили для svg-sprites
+      //- link(rel="stylesheet", href="svg/svg-symbols.css")
+      link(rel="stylesheet", href="css/vendor.css")
+      link(rel="stylesheet", href="css/reset.css")
+      link(rel="stylesheet", href="css/main.css")
+
+    block head
+      title «Mivino» - Федеральная сеть магазинов крафтового и алкогольного мороженого
+
+  body
+    // Yandex.Metrika counter
+    //- script(type='text/javascript').
+    //-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    //-   m[i].l=1*new Date();
+    //-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    //-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    //-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    //-   ym(99068725, "init", {
+    //-   clickmap:true,
+    //-   trackLinks:true,
+    //-   accurateTrackBounce:true,
+    //-   webvisor:true
+    //-   });
+    //- noscript
+    //-   div
+    //-     img(src='https://mc.yandex.ru/watch/99068725' style='position:absolute; left:-9999px;' alt='')
+    //- // /Yandex.Metrika counter
+
+    block body
+    include ../components/Privacy
+    include ../components/ModalFormCall
+
+    block scripts
+      script(src='https://api-maps.yandex.ru/2.1/?apikey=c3472711-0044-40b4-92fe-e8200d2156a0&load=package.map&lang=ru-RU&ver=2.')
+      if production
+        script(src="js/vendor.min.js")
+        script(src="js/validation.min.js")
+        script(src="js/feedback.min.js")
+        script(src="js/scenario.min.js")
+        script(src="js/main.min.js")
+
+        block prod-scripts
+
+      else
+        script(src="js/vendor.js")
+        script(src="js/validation.js")
+        script(src="js/feedback.js")
+        script(src="js/scenario.js")
+        script(src="js/main.js")
+
+        block dev-scripts

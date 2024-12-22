@@ -1,0 +1,56 @@
+.thanks-section
+  display: flex
+  justify-content: center
+  align-items: center
+  flex: 1
+  width: 100%
+
+  &__inner
+    padding: 36px 0
+    text-align: center
+    position relative
+    z-index 3
+    +above($breakpoints.sm)
+      padding: 50px 0
+    +above($breakpoints.md)
+      padding: 70px 0
+    +above($breakpoints.xxl)
+      padding: 100px 0
+
+  &__title
+    margin-bottom: 11px;
+    font-size: 23px
+    line-height: 120%
+    +above($breakpoints.sm)
+      font-size: 24px
+    +above($breakpoints.md)
+      font-size: 32px
+    +above($breakpoints.xxl)
+      font-size: 40px
+      margin-bottom: 20px
+
+  &__title-helper
+    font-size: 16px
+    line-height: 120%
+    margin-bottom: 30px
+    +above($breakpoints.sm)
+      font-size: 18px
+    +above($breakpoints.md)
+      font-size: 22px
+    +above($breakpoints.xxl)
+      font-size: 24px
+      margin-bottom: 40px
+    br
+      display: block
+      +above($breakpoints.sm)
+        display: none
+
+  &__btn
+    max-width: 264px
+    margin: 0 auto
+    +above($breakpoints.sm)
+      max-width: 230px
+    +above($breakpoints.md)
+      max-width: 270px
+    +above($breakpoints.xxl)
+      max-width: 307px

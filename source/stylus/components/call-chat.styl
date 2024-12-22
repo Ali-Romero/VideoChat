@@ -1,0 +1,107 @@
+.call-chat
+  background: white
+  padding: 30px
+  border-radius: 30px
+  display: flex
+  justify-content: space-between
+
+  &__frames
+    display: flex;
+    align-items: center;
+
+  &__frame
+    width: 350px;
+    height: 290px;
+    margin: 10px;
+    background: #000;
+    border-radius: 20px
+
+  &__controll
+    display: flex
+    justify-content: center
+
+  &__btn
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none
+    background: #6ab33e
+    border-radius: 8px
+    font-size: 16px
+    line-height: normal
+    font-family: "Gilroy-Medium"
+    color: $color-black
+    &--end
+      background: #d74747
+      color: $color-white
+
+  &__messages
+    display: flex
+    flex-direction: column
+    gap: 20px
+    flex: 1
+    background-color: #4f5252
+    padding: 20px
+    border-radius: 20px
+    word-wrap: break-word; /* Обеспечивает перенос */
+    word-break: break-word;
+
+  &__messages-frame
+    color: $color-white
+    height: 240px
+    overflow: auto
+    .call-message
+      display: flex
+      flex-direction: column
+      align-items: flex-start;
+      gap: 2px
+      margin: 0 0 8px 0
+      &:last-child
+        margin: 0
+    .message-text
+      padding: 6px
+      border-radius: 6px
+      background: white
+      color: black
+
+  &__messages-container
+    display: flex
+    align-items: flex-end;
+    gap: 10px
+
+  &__messages-input
+    flex: 1
+    height: 60px
+    resize: none;
+    overflow: hidden;
+    border-radius: 10px
+    padding: 14px 6px 10px 14px
+    outline: none
+    border-radius: 14px
+    &::-ms-input-placeholder
+      color: #303437
+      font-family: "Gilroy-Light"
+      font-weight: 300
+    &::-moz-placeholder
+      color: #303437
+      font-family: "Gilroy-Light"
+      font-weight: 300
+    &::-webkit-input-placeholder
+      color: #303437
+      font-family: "Gilroy-Light"
+      font-weight: 300
+    &::placeholder
+      color: #303437
+      font-family: "Gilroy-Light"
+      font-weight: 300
+
+  &__messages-send
+    border: none
+    background: green
+    border-radius: 8px
+    font-size: 16px
+    line-height: normal
+    font-family: "Gilroy-Medium"
+    height: 40px
+    cursor: pointer
+    color: $color-white

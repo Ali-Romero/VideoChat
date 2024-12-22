@@ -1,0 +1,24 @@
+.feedback
+  &__list
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    flex-direction: column
+    justify-content: center
+    gap: 7px
+    +above($breakpoints.sm)
+      flex-direction: row
+      align-items: flex-start
+    +above($breakpoints.md)
+      gap: 14px
+    +above($breakpoints.xxl)
+      gap: 20px
+
+  &__item
+    width 258px
+    +above($breakpoints.sm)
+      width 168px
+    +above($breakpoints.md)
+      width 220px
+    +above($breakpoints.xxl)
+      width 260px
